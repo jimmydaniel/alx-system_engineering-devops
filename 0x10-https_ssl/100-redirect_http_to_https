@@ -40,7 +40,7 @@ frontend  danny-frontend-http
         default_backend danny-backend
 
 frontend danny-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.danielmulugeta.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.getdanny.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	http-request redirect scheme https code 301 unless { ssl_fc }
 	default_backend danny-backend
